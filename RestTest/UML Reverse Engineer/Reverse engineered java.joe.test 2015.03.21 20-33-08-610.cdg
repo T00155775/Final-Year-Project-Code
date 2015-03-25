@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered java.joe.test 2015.03.21 20-33-08-610">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="joe.test" name="ApplicationConfig" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="getClasses" visibility="public" returnType="Set&lt;Class&lt;?&gt;&gt;"/>
+        <Method name="addRestResourceClasses" visibility="private" returnType="void">
+          <Argument type="Set&lt;Class&lt;?&gt;&gt;" name="resources"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="joe.test" name="MyPathResource" visibility="public">
+      <Constructors>
+        <Constructor name="MyPathResource" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="context" visibility="private" type="UriInfo"/>
+      </Fields>
+      <Methods>
+        <Method name="find" visibility="public" returnType="String">
+          <Argument type="String" name="db"/>
+        </Method>
+        <Method name="save" visibility="public" returnType="//@Consumes(&quot;text/plain&quot;)
+String">
+          <Argument type="String" name="db"/>
+        </Method>
+        <Method name="delete" visibility="public" returnType="String">
+          <Argument type="String" name="db"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

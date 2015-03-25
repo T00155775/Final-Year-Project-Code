@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered java.joe.test 2015.02.05 15-07-46-264">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="joe.test" name="ApplicationConfig" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="getClasses" visibility="public" returnType="Set&lt;Class&lt;?&gt;&gt;"/>
+        <Method name="addRestResourceClasses" visibility="private" returnType="void">
+          <Argument type="Set&lt;Class&lt;?&gt;&gt;" name="resources"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="joe.test" name="MyPathResource" visibility="public">
+      <Constructors>
+        <Constructor name="MyPathResource" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="context" visibility="private" type="UriInfo"/>
+      </Fields>
+      <Methods>
+        <Method name="add" visibility="public" returnType="int">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Method>
+        <Method name="name" visibility="public" returnType="String">
+          <Argument type="String" name="content"/>
+        </Method>
+        <Method name="find" visibility="public" returnType="String">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="findCol" visibility="public" returnType="String"/>
+        <Method name="postCol" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

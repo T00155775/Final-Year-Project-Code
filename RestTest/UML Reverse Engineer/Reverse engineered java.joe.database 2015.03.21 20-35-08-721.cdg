@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered java.joe.database 2015.03.21 20-35-08-721">
+  <ClassDiagramComponents>
+    <Class xPosition="33.0" yPosition="54.0" package="joe.database" name="CassandraImplementation" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods/>
+    </Class>
+    <Class xPosition="103.0" yPosition="225.0" package="joe.database" name="CouchImplementation" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="totalTime" visibility="package" type="long"/>
+        <Field name="averageTime" visibility="package" type="long"/>
+        <Field name="max" visibility="package" type="long"/>
+        <Field name="min" visibility="package" type="long"/>
+      </Fields>
+      <Methods>
+        <Method name="find" visibility="public" returnType="String"/>
+        <Method name="saveUnique" visibility="public" returnType="String"/>
+        <Method name="save" visibility="public" returnType="String"/>
+        <Method name="findSingle" visibility="public" returnType="String">
+          <Argument type="ObjectId" name="Id"/>
+        </Method>
+        <Method name="delete" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Interface xPosition="620.0" yPosition="20.0" package="joe.database" name="IRepository" visibility="public">
+      <Methods>
+        <Method name="find" visibility="public" returnType="String"/>
+        <Method name="save" visibility="public" returnType="String"/>
+        <Method name="findSingle" visibility="public" returnType="String">
+          <Argument type="ObjectId" name="Id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class xPosition="656.0" yPosition="225.0" package="joe.database" name="MongoImplementation" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="client" visibility="private" type="MongoClient"/>
+        <Field name="testDB" visibility="private" type="DB"/>
+        <Field name="testCollection" visibility="private" type="DBCollection"/>
+        <Field name="totalTime" visibility="package" type="long"/>
+        <Field name="averageTime" visibility="package" type="long"/>
+        <Field name="max" visibility="package" type="long"/>
+        <Field name="min" visibility="package" type="long"/>
+      </Fields>
+      <Methods>
+        <Method name="find" visibility="public" returnType="String"/>
+        <Method name="save" visibility="public" returnType="String"/>
+        <Method name="findSingle" visibility="public" returnType="String">
+          <Argument type="ObjectId" name="id"/>
+        </Method>
+        <Method name="saveUnique" visibility="public" returnType="String"/>
+        <Method name="delete" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="113.0" yPosition="459.0" package="joe.database" name="Neo4JImplementation" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="totalTime" visibility="package" type="long"/>
+        <Field name="averageTime" visibility="package" type="long"/>
+      </Fields>
+      <Methods>
+        <Method name="save" visibility="public" returnType="String"/>
+        <Method name="saveUnique" visibility="public" returnType="String"/>
+        <Method name="find" visibility="public" returnType="String"/>
+        <Method name="findSingle" visibility="public" returnType="String">
+          <Argument type="ObjectId" name="Id"/>
+        </Method>
+        <Method name="deleteDir" visibility="public" returnType="void">
+          <Argument type="File" name="dir"/>
+        </Method>
+        <Method name="clearDbPath" visibility="private" returnType="void"/>
+      </Methods>
+    </Class>
+    <Class xPosition="452.0" yPosition="459.0" package="joe.database" name="SQLImplementation" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="totalTime" visibility="package" type="long"/>
+        <Field name="averageTime" visibility="package" type="long"/>
+        <Field name="max" visibility="package" type="long"/>
+        <Field name="min" visibility="package" type="long"/>
+        <Field name="sname" visibility="package" type="String"/>
+        <Field name="snumber" visibility="package" type="String"/>
+        <Field name="scourse" visibility="package" type="String"/>
+        <Field name="createddate" visibility="package" type="String"/>
+        <Field name="duration" visibility="package" type="long"/>
+        <Field name="userName" visibility="package" type="String"/>
+        <Field name="passWord" visibility="package" type="String"/>
+        <Field name="sql" visibility="package" type="String"/>
+        <Field name="stmt" visibility="package" type="Statement"/>
+        <Field name="preparedStmt" visibility="package" type="PreparedStatement"/>
+      </Fields>
+      <Methods>
+        <Method name="find" visibility="public" returnType="String"/>
+        <Method name="save" visibility="public" returnType="String"/>
+        <Method name="findSingle" visibility="public" returnType="String">
+          <Argument type="ObjectId" name="Id"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Neo4JImplementation" target="IRepository"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="MongoImplementation" target="IRepository"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CouchImplementation" target="IRepository"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SQLImplementation" target="IRepository"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
